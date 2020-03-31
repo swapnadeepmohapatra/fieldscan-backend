@@ -36,6 +36,10 @@ const UserSchema = new Schema(
       type: Array,
       default: []
     },
+    role: {
+      type: Number,
+      default: 0
+    },
     salt: String
   },
   { timestamps: true }
