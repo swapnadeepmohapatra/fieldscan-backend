@@ -43,5 +43,12 @@ exports.updateUser = (req, res) => {
 };
 
 exports.getQRCode = (req, res) => {
-  res.json({ message: req.profile.aadhar });
+  req.profile.salt = undefined;
+  req.profile.visits = undefined;
+  req.profile.role = undefined;
+  req.profile.encry_password = undefined;
+  req.profile.createdAt = undefined;
+  req.profile.updatedAt = undefined;
+  req.profile.__v = undefined;
+  res.json(req.profile);
 };
