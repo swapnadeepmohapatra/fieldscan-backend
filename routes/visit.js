@@ -8,7 +8,7 @@ const {
   isSuperAdmin,
 } = require("../controllers/auth");
 const { getUserById, pushVisitInList } = require("../controllers/user");
-const { addVisit } = require("../controllers/product");
+const { addVisit } = require("../controllers/place");
 const {
   createVisit,
   getAllVsits,
@@ -16,7 +16,6 @@ const {
 } = require("../controllers/visit");
 
 router.param("userId", getUserById);
-router.param("orderId", getOrderById);
 
 router.post(
   "/visit/create/:userId",
