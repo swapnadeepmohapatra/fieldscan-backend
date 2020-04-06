@@ -12,11 +12,6 @@ const UserSchema = new Schema(
       maxLength: 32,
       trim: true
     },
-    lastname: {
-      type: String,
-      maxLength: 32,
-      trim: true
-    },
     aadhar: {
       type: Number,
       required: true,

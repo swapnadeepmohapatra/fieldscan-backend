@@ -90,3 +90,12 @@ exports.isAdmin = (req, res, next) => {
   }
   next();
 };
+
+exports.isSuperAdmin = (req, res, next) => {
+  if (req.profile.role !== 2 && (req.profile.role === 1 || req.profile.role === 0)) {
+    res.status(403).json({
+      message: "You are not an admin, access denied"
+    });
+  }
+  next();
+};
